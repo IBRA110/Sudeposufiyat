@@ -89,12 +89,16 @@ nav ul li a{
 	white-space: nowrap;
 	color: rgb(255, 255, 255);
 }
+
 nav ul li .galeri{
 	padding: 10px 15px;
 	margin-left: 10px;
 	border-radius: 5px;
 	background-color: rgba(4, 49, 105, 1);
+	border: none;
+	transition: 300ms ease-in;
 }
+
 nav ul li .galeri:active{
 	background-color: rgb(33, 46, 66);
 }
@@ -103,6 +107,7 @@ nav ul li:hover{
 }
 nav ul li:last-child:hover{
 	border-top: 5px solid rgba(4, 49, 105, 0);
+	border: none;
 }
 nav ul li ul{
 	position: absolute;
@@ -124,14 +129,19 @@ nav ul li ul li{
 	border-top: 5px solid rgba(4, 49, 105, 0);
 	background-color: rgb(31, 38, 48);
 	padding: 10px 5px;
+	border: none;
 }
 nav ul li ul li:hover{
 	border-top: 5px solid rgba(4, 49, 105, 0);
+	border: none;
 	background-color: rgb(33, 46, 66);
 }
 nav ul li ul li a{
 	padding: 0;
 	background: none;
+}
+.icon{
+	display: none;
 }
 .burger{
 	display: none;
@@ -146,7 +156,8 @@ nav ul li ul li a{
 		display: block;
 		position: absolute;
 		right: 20px;
-		top: 10px;
+		top: 50%;
+		transform: translate(0, -50%);
 	}
 	nav{
 		display: block;
@@ -165,12 +176,27 @@ nav ul li ul li a{
 		max-height: 500px;
 		overflow-y:	scroll;
 	}
+
 	nav ul li{
-		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 		width: 100%;
 		margin: 5px 0;
 		background-color: rgb(33, 46, 66);
 		border: none;
+	}
+	.icon{
+		display: block;
+		position: absolute;
+		right: 30px;
+		top: 15px;
+		cursor: pointer;
+	}
+	.icon i{
+		font-size: 18px;
+		color: rgb(255, 255, 255);
 	}
 	nav ul li:hover{
 		border: none;
@@ -191,5 +217,13 @@ nav ul li ul li a{
 	nav ul li ul li:hover{
 		width: 100%;
 		background-color: rgb(31, 38, 48);
+	}
+	nav ul li .galeri{
+		background-color: rgb(33, 46, 66);
+		padding: 0px;
+		margin: 0;	
+	}
+	.show{
+		display: block;
 	}
 }
