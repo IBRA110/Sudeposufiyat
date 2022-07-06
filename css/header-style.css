@@ -43,13 +43,18 @@ body{
 	background-color: rgb(0, 0, 0);
 	font-family: 'Lato', sans-serif;
 }
+.wrapper{
+	min-height: 100%;
+}
 header{
 	position: fixed;
 	width: 100%;
+	height: 70px;
 }
 nav{
 	background-color: rgb(0, 0, 0);
 	display: flex;
+	height: 100%;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 100px;
@@ -58,7 +63,8 @@ nav{
 							rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 nav .logo{
-	min-width: 250px;
+	display: inline-block;
+	width: 250px;
 	height: 60px;
 }
 nav .logo img{
@@ -126,4 +132,64 @@ nav ul li ul li:hover{
 nav ul li ul li a{
 	padding: 0;
 	background: none;
+}
+.burger{
+	display: none;
+}
+.burger i{
+	color: rgb(255, 255, 255);
+	font-size: 24px;	
+	cursor: pointer;
+}
+@media(max-width: 968px){
+	.burger{
+		display: block;
+		position: absolute;
+		right: 20px;
+		top: 10px;
+	}
+	nav{
+		display: block;
+		padding: 5px 10px;
+		width: 100%;
+	}
+	nav .list{
+		display: block;	
+		width: 100%;
+		top: 70px;
+		left: 0px;
+		position: absolute;
+		transform: scaleY(0);
+		transform-origin: top;
+		transition: all 300ms ease;
+		max-height: 500px;
+		overflow-y:	scroll;
+	}
+	nav ul li{
+		display: block;
+		width: 100%;
+		margin: 5px 0;
+		background-color: rgb(33, 46, 66);
+		border: none;
+	}
+	nav ul li:hover{
+		border: none;
+	}
+	nav ul li ul{
+		width: 100%;
+		position: static;
+		top: 20px;
+		opacity:1;
+		visibility: visible;
+		margin: 5px 0;
+		display: none;
+	}
+	nav ul li ul li{
+		width: 100%;
+		background-color: rgb(31, 38, 48);
+	}
+	nav ul li ul li:hover{
+		width: 100%;
+		background-color: rgb(31, 38, 48);
+	}
 }
