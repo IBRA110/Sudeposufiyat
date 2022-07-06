@@ -5,6 +5,9 @@ window.onload = () => {
 	let listOfLinks = document.querySelectorAll('.link')
 	let listOfA = document.querySelectorAll('.a-link')
 	const buttons = document.querySelectorAll("[data-carousel-button]")
+	var clientWidth = document.querySelector('.wrapper').offsetWidth;
+	
+	console.log(clientWidth)
 
 	burger.addEventListener('click', () => {
 		if (menu.style.transform === 'scaleY(1)'){
@@ -26,7 +29,9 @@ window.onload = () => {
 
 	listOfA.forEach(a => {
 		a.addEventListener('click', () => {
-			menu.style.transform = 'scaleY(0)';
+			if (clientWidth < 986){
+				menu.style.transform = 'scaleY(0)';
+			}
 		});
 	});
 
