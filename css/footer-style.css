@@ -1,5 +1,6 @@
 .footer{
 	display: flex;
+	position: relative;
 	justify-content: center;
 	align-items: flex-start;
 	gap: 50px;
@@ -51,6 +52,20 @@
 }
 .author a{
 	color:  rgba(4, 49, 105, 1);
+}
+#buttondown{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 60px;
+	height: 40px;
+	background-color: rgba(4, 49, 105, 1);
+	border: 1px solid rgba(255, 255, 255, 1);
+	transform: translate(-50%, -50%);
+}
+#buttondown i{
+	font-size: 24px;
+	color: rgb(255, 255, 255);
 }
 @media(max-width: 768px){
 	.footer{
