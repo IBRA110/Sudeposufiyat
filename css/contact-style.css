@@ -1,0 +1,53 @@
+.map{
+	padding: 100px;
+}
+.form-address{
+	padding: 20px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 20px;
+}
+form{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+form h2{
+	color: rgb(255, 255, 255);
+	font-size: 24px;
+}
+input, textarea{
+	background: transparent;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 5px;
+	font-size: 14px;
+	padding: 10px;
+	width: 400px;
+	color: rgb(255, 255, 255);
+}
+button{
+	border-radius: 5px;
+	background-color: rgba(4, 49, 105, 1);
+	border: none;
+	width: 100px;
+	height: 50px;
+	font-size: 14px;
+	color: rgb(255, 255, 255);
+	transition: 300ms ease-in;
+}
+@media(max-width: 768px){
+	.map{
+		padding: 10px;
+	}
+	.form-address{
+		padding: 20px 100px;
+		display: flex;
+		padding: 10px;
+		flex-direction: column;	
+		align-items: center;
+	}
+	input, textarea{
+		width: 300px;
+	}
+}
